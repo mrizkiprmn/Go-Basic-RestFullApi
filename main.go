@@ -24,6 +24,9 @@ func SetJSONRespon(res http.ResponseWriter, message []byte, httpCode int) {
 }
 
 func main() {
+
+	fmt.Println("server started at localhost:8888")
+	http.ListenAndServe(":8888", nil)
 	
 	database["001"] = Product{ID: "001", Name: "Iphone X", Quantity: 5}
 	database["002"] = Product{ID: "002", Name: "Samsung S12", Quantity: 10}
